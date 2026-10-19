@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEATLAB — DJ Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#home" class="brand">BEAT<span>LAB.</span></a>
+
+    <nav>
+      <a href="#studio">Студія</a>
+      <a href="#about">Про DJ</a>
+      <a href="#advantages">Професія</a>
+      <a href="#equipment">Обладнання</a>
+    </nav>
+
+    <button id="themeToggle" class="icon-button" aria-label="Змінити тему">
+      ◐
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> ELECTRONIC MUSIC CULTURE</div>
+
+        <h1>MAKE<br>YOUR OWN<br><span>BEAT.</span></h1>
+
+        <p>
+          Не просто слухай музику. Відчуй її, змішуй
+          звуки та створюй власну атмосферу.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#studio" class="primary-button">Відкрити студію ↗</a>
+          <a href="#about" class="text-link">Дізнатися більше ↓</a>
+        </div>
+
+        <div class="hero-bottom">
+          <span>РИТМ</span>
+          <span>ТВОРЧІСТЬ</span>
+          <span>ТВОЯ МУЗИКА</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-label label-top">AUDIO / 001</div>
+
+        <div class="vinyl" id="heroVinyl">
+          <div class="vinyl-ring ring-one"></div>
+          <div class="vinyl-ring ring-two"></div>
+          <div class="vinyl-ring ring-three"></div>
+          <div class="vinyl-label">BL<span>✳</span></div>
+        </div>
+
+        <div class="art-label label-bottom">
+          <span>FREQUENCY</span>
+          <strong>∞</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Слоган">
+      <div class="ticker-track">
+        <span>FEEL THE MUSIC ✳ CREATE YOUR SOUND ✳ MIX YOUR WORLD ✳</span>
+        <span>FEEL THE MUSIC ✳ CREATE YOUR SOUND ✳ MIX YOUR WORLD ✳</span>
+      </div>
+    </section>
+
+    <section class="section intro-section" id="about">
+      <div class="section-heading">
+        <span class="section-number">01 / ABOUT</span>
+        <h2>ХТО ТАКИЙ<br><span>DJ?</span></h2>
+      </div>
+
+      <div class="intro-content">
+        <p class="large-text">
+          Діджей — це людина, яка перетворює
+          музику на атмосферу.
+        </p>
+
+        <p class="muted">
+          Він підбирає треки, синхронізує ритми,
+          створює плавні переходи та керує настроєм
+          аудиторії. DJ може грати електронну музику,
+          хіп-хоп, хаус, техно та багато інших стилів.
+        </p>
+
+        <div class="mini-facts">
+          <div><strong>01</strong><span>Підбір музики</span></div>
+          <div><strong>02</strong><span>Мікшування</span></div>
+          <div><strong>03</strong><span>Створення атмосфери</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="studio-section" id="studio">
+      <div class="studio-header">
+        <div>
+          <span class="section-number">02 / PLAYGROUND</span>
+          <h2>МІНІ<span>СТУДІЯ</span></h2>
+        </div>
+        <span class="studio-status"><span class="live-dot"></span> READY TO PLAY</span>
+      </div>
+
+      <div class="console">
+        <div class="console-top">
+          <span>BEATLAB CONSOLE</span>
+          <span>DECK A / DECK B</span>
+        </div>
+
+        <div class="decks">
+          <div class="deck">
+            <div class="deck-name">DECK A</div>
+            <div class="disc" id="discA">
+              <div class="disc-center">A</div>
+            </div>
+            <div class="deck-caption">CHANNEL 01</div>
+          </div>
+
+          <div class="mix-center">
+            <div class="sound-bars" id="soundBars">
+              <i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i>
+            </div>
+
+            <div class="bpm-number"><span id="bpmReadout">120</span><small>BPM</small></div>
+
+            <label for="tempo">TEMPO</label>
+            <input type="range" id="tempo" min="70" max="160" value="120">
+
+            <label for="volume">MASTER VOLUME <span id="volumeReadout">50%</span></label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+
+            <div class="console-buttons">
+              <button id="playButton" class="play-button">▶ PLAY</button>
+              <button id="stopButton" class="stop-button">■ STOP</button>
+            </div>
+
+            <p id="playerStatus" role="status">Система готова</p>
+          </div>
+
+          <div class="deck">
+            <div class="deck-name">DECK B</div>
+            <div class="disc disc-purple" id="discB">
+              <div class="disc-center">B</div>
+            </div>
+            <div class="deck-caption">CHANNEL 02</div>
+          </div>
+        </div>
+
+        <div class="console-footer">
+          <span>LIVE AUDIO ENGINE</span>
+          <span id="clock">00:00</span>
+          <span>BEATLAB ©</span>
+        </div>
+      </div>
+
+      <p class="studio-note">
+        Демонстраційна студія генерує простий ритм прямо у браузері.
+      </p>
+    </section>
+
+    <section class="section career-section" id="advantages">
+      <div class="section-heading">
+        <span class="section-number">03 / THE REALITY</span>
+        <h2>ДВІ СТОРОНИ<br><span>ПРОФЕСІЇ</span></h2>
+      </div>
+
+      <div class="pros-cons">
+        <article class="reality-card">
+          <span class="card-index">THE GOOD SIDE / +</span>
+          <h3>Що круто?</h3>
+          <ul>
+            <li>Можна перетворити хобі на професію.</li>
+            <li>Свобода творчості та власний музичний стиль.</li>
+            <li>Нові знайомства й цікаві виступи.</li>
+            <li>Можливість створювати власні треки.</li>
+            <li>Заробіток на виступах та музичних проєктах.</li>
+          </ul>
+        </article>
+
+        <article class="reality-card downside">
+          <span class="card-index">THE HARD SIDE / −</span>
+          <h3>Що складно?</h3>
+          <ul>
+            <li>Потрібно багато практики й терпіння.</li>
+            <li>Обладнання та програми можуть коштувати дорого.</li>
+            <li>На початку нелегко знайти слухачів.</li>
+            <li>Виступи можуть бути пізно ввечері.</li>
+            <li>Дохід не завжди стабільний.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="equipment-section" id="equipment">
+      <div class="section-heading equipment-heading">
+        <span class="section-number">04 / YOUR TOOLS</span>
+        <h2>АРСЕНАЛ<br><span>ДІДЖЕЯ</span></h2>
+      </div>
+
+      <div class="equipment-list">
+        <article class="equipment-row">
+          <span class="equipment-icon">◉</span>
+          <span class="equipment-title">DJ-контролер</span>
+          <p>Керує треками, переходами та звуковими ефектами.</p>
+          <span class="equipment-num">01</span>
+        </article>
+
+        <article class="equipment-row">
+          <span class="equipment-icon">⌁</span>
+          <span class="equipment-title">Навушники</span>
+          <p>Допомагають підготувати наступний трек.</p>
+          <span class="equipment-num">02</span>
+        </article>
+
+        <article class="equipment-row">
+          <span class="equipment-icon">▣</span>
+          <span class="equipment-title">Ноутбук</span>
+          <p>Запускає DJ-програму та зберігає музичну бібліотеку.</p>
+          <span class="equipment-num">03</span>
+        </article>
+
+        <article class="equipment-row">
+          <span class="equipment-icon">)))</span>
+          <span class="equipment-title">Акустика</span>
+          <p>Передає звук аудиторії та допомагає контролювати мікс.</p>
+          <span class="equipment-num">04</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <span class="section-number">05 / YOUR NEXT MOVE</span>
+      <h2>ТВОЯ ЧЕРГА<br>СТВОРИТИ <span>РИТМ.</span></h2>
+      <p>Почни з основ, практикуйся та шукай власне звучання.</p>
+      <a class="primary-button"
+         href="https://www.virtualdj.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        ВІДКРИТИ VIRTUALDJ ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="brand">BEAT<span>LAB.</span></a>
+    <p>DESIGNED FOR THE LOVE OF MUSIC.</p>
+    <span>© <span id="year"></span> BEATLAB</span>
+  </footer>
+
+</body>
+</html>
